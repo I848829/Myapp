@@ -13,13 +13,12 @@ app.get('/', function (req, res) {
 
 app.get('/api/beacon/state', function (req, res) {
 
-  res.send('GET request to the homepage with parameters');
-
   var uuid = req.query.uuid;
   var timeIn = req.query.timein;
   var timeOut = req.query.timeout;
 
   console.log("uuid: " + uuid + ", TimeIn: " + timeIn + ", TimeOut: " + timeOut);
+  res.send("uuid: " + uuid + ", TimeIn: " + timeIn + ", TimeOut: " + timeOut);
 
 });
 
