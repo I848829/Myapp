@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 });
 
-app.get('/api/beacon/state', function (req, res) {
+app.get('/api1', function (req, res) {
 
   var uuid = req.query.uuid;
   var timeIn = req.query.timein;
@@ -19,6 +19,16 @@ app.get('/api/beacon/state', function (req, res) {
 
   console.log("uuid: " + uuid + ", TimeIn: " + timeIn + ", TimeOut: " + timeOut);
   res.send("uuid: " + uuid + ", TimeIn: " + timeIn + ", TimeOut: " + timeOut);
+
+});
+
+app.get('/api2', function (req, res) {
+
+  var uuid = req.query.uuid;
+  var ts = req.query.ts;
+
+  console.log("uuid: " + uuid + ", TimeStamp: " + ts);
+  res.send("uuid: " + uuid + ", TimeStamp: " + ts);
 
 });
 
